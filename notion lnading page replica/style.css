@@ -1,0 +1,326 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  /*----------  COLORS  ----------*/
+
+  --clr-bg: white;
+  --clr-head: #111111;
+  --clr-subheading: #949392;
+  --clr-subtext: #999897;
+  --clr-nav: #b9b6b4;
+  --clr-btn--primary: #e95f55;
+  --clr-btn--secondary: #fbebe8;
+  --clr-btn--shadow: #cf534a;
+  --clr-btn--text: white;
+  --clr-hover: #3b3a3a;
+  --clr-input--shadow: #abdcef;
+  /*----------   FONT FAMILY    ----------*/
+
+  --ff-primary: inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /*----------   FONT SIZING   ----------*/
+
+  --fs-xl: 7rem;
+  --fs-lg: 6rem;
+  --fs-md: 5rem;
+  --fs-sm: 3rem;
+  --fs-xs: 1.8rem;
+  --fs-xxs: 1.4rem;
+  --fs-xxxs: 1.2rem;
+
+  /*----------  FONT WEIGHTS   ----------*/
+  --fw-xl: 800;
+  --fw-lg: 700;
+  --fw-md: 600;
+  --fw-sm: 400;
+  --fw-xs: 300;
+}
+
+/*=============================================
+=            COMPONENTS AND GENERAL            =
+=============================================*/
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: var(--clr-bg);
+  font-family: var(--ff-primary);
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn {
+  padding: 1rem 0.8rem;
+  border-radius: 0.3rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: var(--fw-md);
+  font-size: var(--fs-xxs);
+}
+.btn:hover {
+  filter: brightness(95%);
+}
+.btn__primary {
+  background: var(--clr-btn--primary);
+  color: var(--clr-btn--text);
+  box-shadow: inset 0 0 0.05rem 0.1em var(--clr-btn--shadow);
+}
+.btn__secondary {
+  background: var(--clr-btn--secondary);
+  color: var(--clr-btn--primary);
+  box-shadow: inset 0 0 0.05rem 0.05em var(--clr-btn--shadow);
+}
+/*=============================================
+=            NAVIGATION            =
+=============================================*/
+
+header {
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo {
+  height: 32px;
+  width: 100px;
+}
+.nav__icon {
+  font-size: var(--fs-sm);
+}
+.nav__icon:hover {
+  cursor: pointer;
+}
+
+.nav__menu--sm {
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-bg);
+  z-index: 3;
+  padding: 2rem;
+  display: none;
+  grid-template: auto 2fr 4fr / repeat(2, 1fr);
+  row-gap: 2rem;
+}
+.nav__menu--lg {
+  display: none;
+}
+/*----------  Subnavs  ----------*/
+.nav__menu--sm > .subnav {
+  border-top: 0.1rem solid var(--clr-nav);
+  padding-top: 2rem;
+}
+.subnav__title {
+  font-size: var(--fs-xxxs);
+  font-weight: var(--fw-md);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-subtext);
+}
+.nav__link {
+  color: var(--clr-head);
+  text-transform: capitalize;
+  font-size: var(--fs-xs);
+}
+.nav__buttons {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.nav__btn {
+  flex: 1 0 auto;
+}
+.download,
+.more,
+.notion-for {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: 1rem;
+}
+.notion-for {
+  grid-column: 1/-1;
+  grid-template-columns: repeat(2, 1fr);
+}
+.notion-for > .subnav__title {
+  grid-column: 1 / span 2;
+}
+.notion-for > a:last-child {
+  grid-column: 2;
+}
+
+/*=============================================
+=             HERO SECTION            =
+=============================================*/
+
+/*----------  title  ----------*/
+main.hero {
+  width: 100%;
+  padding: 5rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.hero__image {
+  width: clamp(310px, 50vw, 500px);
+  aspect-ratio: 2/1;
+}
+.hero__main-title {
+  font-size: clamp(var(--fs-md), 8vw, 8rem);
+  color: var(--clr-head);
+}
+.hero__sub-title {
+  font-size: var(--fs-xs);
+  color: var(--clr-subheading);
+  font-weight: var(--fw-sm);
+}
+/*----------  form  ----------*/
+.sign-up-form {
+  width: 100%;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+form {
+  width: 340px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+input {
+  width: 75%;
+  padding: 0.8rem 1rem;
+  font-size: var(--fs-xs);
+  border: 0.05rem solid var(--clr-subtext);
+  border-radius: 0.3rem;
+}
+input:focus {
+  box-shadow: 0 0 0.05em 0.2em var(--clr-input--shadow);
+}
+input::placeholder {
+  color: var(--clr-subheading);
+}
+.sign-up-form__btn {
+  width: 25%;
+}
+.sub-text {
+  font-size: var(--fs-xxs);
+  color: var(--clr-subtext);
+}
+
+/*=============================================
+=            MEDIA QUERIES            =
+=============================================*/
+@media screen and (min-width: 600px) {
+  .nav__buttons {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .nav__icon {
+    display: none;
+  }
+
+  .nav__menu--lg {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
+  }
+  .subnav {
+    position: relative;
+  }
+  .subnav__title--lg {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .subnav__title--lg > h1 {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-sm);
+    color: var(--clr-head);
+    text-transform: capitalize;
+  }
+  .subnav__content {
+    display: none;
+    position: absolute;
+    left: -50%;
+    top: 100%;
+    width: 20vw;
+    padding: 1em 0 1em;
+    background: var(--clr-bg);
+    box-shadow: 0 0.8em 0.8em var(--clr-nav);
+  }
+  .subnav__content .nav__link {
+    font-size: var(--fs-xxs);
+    padding: 0.5em 1em;
+  }
+  .subnav__content h2 {
+    font-size: var(--fs-xxxs);
+    font-weight: var(--fw-md);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--clr-subtext);
+    padding: 0.5em 1em;
+  }
+  .subnav__content span {
+    background: var(--clr-nav);
+    height: 0.1em;
+    width: 100%;
+  }
+  .subnav__content a:nth-child(-n + 5) {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+  }
+  .sign-up {
+    position: relative;
+  }
+  .sign-up::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -0.5em;
+    height: 100%;
+    width: 0.1em;
+    background: var(--clr-nav);
+  }
+  .subnav__title--lg:hover,
+  .nav__link:hover {
+    background: var(--clr-btn--secondary);
+    cursor: pointer;
+  }
+  .subnav:hover .subnav__content {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>notion replica</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a class="nav__logo" href="#"><img src="./assets/logo.svg" alt="" /></a>
+        <div class="nav__menu">
+          <!------------  MOBILE MENU  ------------>
+          <div class="nav__menu--sm">
+            <!------------  Sign up & Log in  ------------>
+            <div class="subnav nav__buttons">
+              <a href="" class="nav__btn btn btn__primary">log in</a>
+              <a href="" class="nav__btn btn btn__secondary">sign up</a>
+            </div>
+            <!------------  Notion for  ------------>
+            <div class="subnav notion-for">
+              <h1 class="subnav__title">notion for</h1>
+              <a href="" class="nav__link">teams</a>
+              <a href="" class="nav__link">personal use</a>
+              <a href="" class="nav__link">enterprise</a>
+              <a href="" class="nav__link">remote work</a>
+              <a href="" class="nav__link">startups</a>
+              <a href="" class="nav__link">team wiki</a>
+              <a href="" class="nav__link">education</a>
+              <a href="" class="nav__link">projects & tasks</a>
+              <a href="" class="nav__link">notes & docs</a>
+            </div>
+            <div class="subnav download">
+              <h1 class="subnav__title">download</h1>
+              <a href="" class="nav__link">IOS & android</a>
+              <a href="" class="nav__link">mac & windows</a>
+              <a href="" class="nav__link">web clipper</a>
+            </div>
+            <div class="subnav more">
+              <h1 class="subnav__title">more</h1>
+              <a href="" class="nav__link">customers</a>
+              <a href="" class="nav__link">pricing</a>
+              <a href="" class="nav__link">careers</a>
+              <a href="" class="nav__link">blog</a>
+              <a href="" class="nav__link">switch from evernote</a>
+              <a href="" class="nav__link">switch from confluence</a>
+            </div>
+          </div>
+          <!------------  DESKTOP MENU  ------------>
+          <div class="nav__menu--lg">
+            <a href="" class="nav__link log-in">log in</a>
+            <a href="" class="nav__link sign-up">sign up</a>
+            <a href="" class="nav__link">careers</a>
+            <a href="" class="nav__link">pricing</a>
+
+            <div class="subnav">
+              <div class="subnav__title--lg">
+                <h1>resources</h1>
+                <i class="fas fa-angle-down"></i>
+              </div>
+              <div class="subnav__content">
+                <a href="" class="nav__link">customers stories</a>
+                <a href="" class="nav__link">guides & tutorials</a>
+                <a href="" class="nav__link">help & support</a>
+                <a href="" class="nav__link">blog</a>
+                <a href="" class="nav__link">API</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <div class="subnav__title--lg">
+                <h1>download</h1>
+                <i class="fas fa-angle-down"></i>
+              </div>
+              <div class="subnav__content">
+                <a href="" class="nav__link">IOS & android</a>
+                <a href="" class="nav__link">mac & windows</a>
+                <a href="" class="nav__link">web clipper</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <div class="subnav__title--lg">
+                <h1>product</h1>
+                <i class="fas fa-angle-down"></i>
+              </div>
+
+              <div class="subnav__content">
+                <a href="" class="nav__link"><i class="fas fa-home"></i>home</a>
+                <span class="separtor-line"></span>
+                <a href="" class="nav__link"
+                  ><i class="fas fa-book"></i>team wiki</a
+                >
+                <a href="" class="nav__link"
+                  ><i class="fas fa-clock"></i>projects & tasks</a
+                >
+                <a href="" class="nav__link"
+                  ><i class="fas fa-sticky-note"></i>notes & docs</a
+                >
+                <span class="separtor-line"></span>
+                <h2 class="subnav__subtitle">notion for</h2>
+                <a href="" class="nav__link">teams</a>
+                <a href="" class="nav__link">personal use</a>
+                <a href="" class="nav__link">enterprise</a>
+                <a href="" class="nav__link">remote work</a>
+                <a href="" class="nav__link">startups</a>
+                <a href="" class="nav__link">education</a>
+                <span class="separtor-line"></span>
+                <h2 class="subnav__subtitle">switch from</h2>
+                <a href="" class="nav__link">evernote</a>
+                <a href="" class="nav__link">confluence</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav__icon">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <main class="hero">
+      <img src="./assets/hero.png" alt="" class="hero__image" />
+      <section class="hero__title">
+        <h1 class="hero__main-title">All-in-one-workspace</h1>
+        <h2 class="hero__sub-title">
+          One tool for your whole team. Write, plan, and get organized.
+        </h2>
+      </section>
+      <section class="sign-up-form">
+        <form action="">
+          <input type="email" placeholder="Enter your email..." />
+          <a href="" class="sign-up-form__btn btn btn__primary">sign up</a>
+        </form>
+        <span class="sub-text"
+          >For teams & individuals — web, mobile, Mac, Windows.</span
+        >
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
